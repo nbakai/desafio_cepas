@@ -1,0 +1,2 @@
+module RevistsHelper
+end

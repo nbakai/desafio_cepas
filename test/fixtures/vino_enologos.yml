@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vino: one
+  enologo: one
+  nota: 1
+
+two:
+  vino: two
+  enologo: two
+  nota: 1

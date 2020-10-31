@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vino: one
+  cepa: one
+  disponible: false
+
+two:
+  vino: two
+  cepa: two
+  disponible: false

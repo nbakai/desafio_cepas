@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  enologo: one
+  revist: one
+  cargo: MyString
+
+two:
+  enologo: two
+  revist: two
+  cargo: MyString
