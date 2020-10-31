@@ -1,5 +1,6 @@
 class CepasController < ApplicationController
   before_action :set_cepa, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /cepas
   # GET /cepas.json

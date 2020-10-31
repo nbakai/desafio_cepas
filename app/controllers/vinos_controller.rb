@@ -1,5 +1,6 @@
 class VinosController < ApplicationController
   before_action :set_vino, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /vinos
   # GET /vinos.json

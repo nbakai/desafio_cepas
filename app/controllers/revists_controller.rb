@@ -1,5 +1,6 @@
 class RevistsController < ApplicationController
   before_action :set_revist, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /revists
   # GET /revists.json
