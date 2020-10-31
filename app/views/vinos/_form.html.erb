@@ -32,11 +32,16 @@
       <%end%>
     <% end %>
   </div>
-  <%= fields_for :vino_enologos do |f| %>
+  <%#= fields_for :vino_enologos do |f| %>
+  <%# <div class="field"> %>
+      <%#= f.number_field :nota%>
+  <%# </div> %>
+  <%#end%>
   <div class="field">
-      <%= f.number_field :nota%>
+    <%= form.label :nota %>
+    <%= form.number_field :nota %>
   </div>
-  <%end%>
+  
   <div class="actions">
     <%= form.submit %>
   </div>

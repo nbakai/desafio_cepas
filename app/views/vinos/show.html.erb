@@ -5,9 +5,7 @@
   <%= @vino.nombre %>
 </p>
 <p> <strong>Nota:</strong>
-<% @vino.vino_enologos.each do |notavino|%>
-        <%= notavino.nota%> 
-        <%end%>
+  <%= @vino.nota %>
 </p>
 <%= link_to 'Edit', edit_vino_path(@vino) %> |
 <%= link_to 'Back', vinos_path %>
