@@ -14,14 +14,17 @@
     <% @revists.each do |revist| %>
       <tr>
         <td><%= revist.nombre %></td>
-        <td><%= link_to 'Show', revist %></td>
-        <td><%= link_to 'Edit', edit_revist_path(revist) %></td>
-        <td><%= link_to 'Destroy', revist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if current_user.admi?%>
+          <td><%= link_to 'Show', revist %></td>
+          <td><%= link_to 'Edit', edit_revist_path(revist) %></td>
+          <td><%= link_to 'Destroy', revist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%end%>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Revist', new_revist_path %>
+<% if current_user.admi?%>
+  <%= link_to 'New Revist', new_revist_path %>
+<%end%>

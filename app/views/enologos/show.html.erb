@@ -23,5 +23,7 @@
   <strong>Cargo:</strong>
   <%= @enologo.nacionalidad %>
 </p>
-<%= link_to 'Edit', edit_enologo_path(@enologo) %> |
+<% if current_user.admi?%>
+  <%= link_to 'Edit', edit_enologo_path(@enologo) %>
+<%end%>
 <%= link_to 'Back', enologos_path %>
