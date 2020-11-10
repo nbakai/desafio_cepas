@@ -8,7 +8,7 @@
   <%= @vino.nota %>
 </p>
 
-
+<% if current_user.admi?%>
   <%= link_to 'Edit', edit_vino_path(@vino) %> |
+<%end%>
   <%= link_to 'Back', vinos_path %>
-
