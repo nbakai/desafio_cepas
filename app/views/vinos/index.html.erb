@@ -28,17 +28,17 @@
           <%end%>
         <br></ul></td>
         <td><%= vino.nota %></td>
-    
+        <% if current_user.admi?%>
           <td><%= link_to 'Show', vino %></td>
           <td><%= link_to 'Edit', edit_vino_path(vino) %></td>
           <td><%= link_to 'Destroy', vino, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-       
+        <%end%>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
+<% if current_user.admi?%>
   <%= link_to 'New Vino', new_vino_path %>
-
+ <%end%>
