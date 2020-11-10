@@ -16,11 +16,11 @@
       <tr>
         <td><%= cepa.nombre %></td>
         <td><%= cepa.proporcion %></td>
-        <% if current_user.admi?%>
+        <%# if current_user.admi?%>
           <td><%= link_to 'Show', cepa %></td>
           <td><%= link_to 'Edit', edit_cepa_path(cepa) %></td>
           <td><%= link_to 'Destroy', cepa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <%end%>
+        <%#end%>
       </tr>
     <% end %>
   </tbody>

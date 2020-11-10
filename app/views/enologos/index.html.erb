@@ -26,17 +26,17 @@
         <td><ul><% enologo.enologo_revists.each do |revista|%> 
           <li><%=revista.cargo%></li> 
         <%end%><br></ul></td>
-        <% if current_user.admi?%>
+        <%# if current_user.admi?%>
           <td><%= link_to 'Show', enologo %></td>
           <td><%= link_to 'Edit', edit_enologo_path(enologo) %></td>
           <td><%= link_to 'Destroy', enologo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <%end%>
+        <%#end%>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-<% if current_user.admi?%>
+<%# if current_user.admi?%>
   <%= link_to 'New Enologo', new_enologo_path %>
-<%end%>
+<%#end%>
