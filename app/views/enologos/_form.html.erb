@@ -25,26 +25,19 @@
     <%= form.label :nacionalidad %>
     <%= form.text_field :nacionalidad %>
   </div>
-    <%= fields_for :enologo_revist do |f| %>
+ 
     <div class="field">
-      <%= f.label :revist, 'revista' %>
-      <%= f.collection_check_boxes(:revist_ids, Revist.all, :id, :nombre) do |b| %>
+      <%= form.label :revist, 'Revista' %>
+      <%= form.collection_check_boxes(:revist_ids, Revist.all, :id, :nombre) do |b| %>
         <%= b.label class:"label-checkbox" do%>
           <%=b.check_box + b.text %>
+         <%= fields_for :enologo_revist do |f| %>
+        <%= f.select :cargo, options_for_select(['Editor', 'Writer', 'Reviewer'])%>
         <%end%>
       <%end%>
-      <%= f.select :cargo, options_for_select(['Editor', 'Writer', 'Reviewer'])%>
     </div>
   <%end%>
-  <%# <div class="field">
-    <%= form.label :revist, 'Revista' %>
-    <%#= form.collection_check_boxes:revist_ids, Revist.all, :id, :nombre do |b| %>
-      <%#= b.label class:"label-checkbox" do%>
-        <%#=b.check_box + b.text %>
-      <%#end%>
-      <%#= b.select :cargo, options_for_select(['Editor', 'Writer', 'Reviewer'])%>
-  <%#</div>
-  <%#end%>
+
     
   
   <div class="actions">

@@ -16,12 +16,14 @@
 </p>
 
 <p>
-  <strong>Revista:</strong>
+  <strong>Revista(s):</strong> <br>
   <% @enologo.enologo_revists.each do |enologo|%>
       <%= enologo.revist.nombre %>
 </p>
+<%end%>
 <p>
   <strong>Cargo:</strong>
+<% @enologo.enologo_revists.each do |enologo|%>
   <%= enologo.cargo %>
 </p>
 <%end%>

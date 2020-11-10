@@ -20,9 +20,11 @@
         <td><%= enologo.nombre %></td>
         <td><%= enologo.edad %></td>
         <td><%= enologo.nacionalidad %></td>
-        <td><ul><% enologo.enologo_revists.each do |revista|%> 
+        <td><% enologo.enologo_revists.each do |revista|%> 
+          <ul>
           <li><%=revista.revist.nombre%></li> 
-        <%end%> <br></ul></td>
+         <br></ul>
+         <%end%></td>
         <td><ul><% enologo.enologo_revists.each do |revista|%> 
           <li><%=revista.cargo%></li> 
         <%end%><br></ul></td>
