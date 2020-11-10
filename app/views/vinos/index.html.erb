@@ -28,9 +28,7 @@
           <%end%>
         <br></ul></td>
         <td><%= vino.nota %></td>
-         <%# vino.vino_enologos.each do |notavino|%>
-        <%# <td><%#= notavino.nota%> 
-        
+    
           <td><%= link_to 'Show', vino %></td>
           <td><%= link_to 'Edit', edit_vino_path(vino) %></td>
           <td><%= link_to 'Destroy', vino, method: :delete, data: { confirm: 'Are you sure?' } %></td>
