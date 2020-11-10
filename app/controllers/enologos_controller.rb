@@ -49,6 +49,7 @@ class EnologosController < ApplicationController
   def update
     respond_to do |format|
       if @enologo.update(enologo_params)
+       
         format.html { redirect_to @enologo, notice: 'Enologo was successfully updated.' }
         format.json { render :show, status: :ok, location: @enologo }
       else
