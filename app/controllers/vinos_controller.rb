@@ -27,14 +27,13 @@ class VinosController < ApplicationController
   # POST /vinos.json
   def create
     @vino = Vino.new(vino_params)
-    @vino_enologo = VinoEnologo.new(nota: params[:vino_enologos][:nota])
-   
+    #@vino_enologo = VinoEnologo.new(nota: params[:vino_enologo][:nota])
 
     respond_to do |format|
       if @vino.save
-        @vino_enologo.nota 
-        @vino_enologo.save!
-        @vino.save!
+        # @vino_enologo.nota 
+        # @vino_enologo.save!
+        # @vino.save!
         format.html { redirect_to @vino, notice: 'Vino was successfully created.' }
         format.json { render :show, status: :created, location: @vino }
       else
