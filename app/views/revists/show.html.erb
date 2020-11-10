@@ -4,8 +4,8 @@
   <strong>Nombre:</strong>
   <%= @revist.nombre %>
 </p>
-<% if current_user.admi?%>
+<%# if current_user.admi?%>
   <%= link_to 'Edit', edit_revist_path(@revist) %> |
-<%end%>
+<%#end%>
 <br>
   <%= link_to 'Back', revists_path %>
