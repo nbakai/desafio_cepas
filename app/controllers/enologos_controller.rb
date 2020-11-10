@@ -1,6 +1,6 @@
 class EnologosController < ApplicationController
   before_action :set_enologo, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+
 
   # GET /enologos
   # GET /enologos.json
