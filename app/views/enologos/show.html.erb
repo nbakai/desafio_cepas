@@ -17,12 +17,14 @@
 
 <p>
   <strong>Revista:</strong>
-  <%= @enologo.nacionalidad %>
+  <% @enologo.enologo_revists.each do |enologo|%>
+      <%= enologo.revist.nombre %>
 </p>
 <p>
   <strong>Cargo:</strong>
-  <%= @enologo.nacionalidad %>
+  <%= enologo.cargo %>
 </p>
+<%end%>
 <% if current_user.admi?%>
   <%= link_to 'Edit', edit_enologo_path(@enologo) %>
 <%end%>

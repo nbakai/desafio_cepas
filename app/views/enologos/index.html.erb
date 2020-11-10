@@ -21,9 +21,11 @@
         <td><%= enologo.edad %></td>
         <td><%= enologo.nacionalidad %></td>
         <td><ul><% enologo.enologo_revists.each do |revista|%> 
-          <li><%=revista.revist.nombre%><%=revista.cargo%></li> 
-        <%end%>
-        <br></ul></td>
+          <li><%=revista.revist.nombre%></li> 
+        <%end%> <br></ul></td>
+        <td><ul><% enologo.enologo_revists.each do |revista|%> 
+          <li><%=revista.cargo%></li> 
+        <%end%><br></ul></td>
         <% if current_user.admi?%>
           <td><%= link_to 'Show', enologo %></td>
           <td><%= link_to 'Edit', edit_enologo_path(enologo) %></td>

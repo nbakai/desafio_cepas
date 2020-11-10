@@ -26,11 +26,13 @@ class EnologosController < ApplicationController
   # POST /enologos.json
   def create
     @enologo = Enologo.new(enologo_params)
-    @enologo_revist = EnologoRevist.new( cargo: params[:enologo_revists][:cargo])
+    @enologo_revist = EnologoRevist.new( revist_id: params[:enologo_revist][:revist_id], cargo: params[:enologo_revist][:cargo])
 
     respond_to do |format|
       if @enologo.save
-        @enologo_revist.cargo
+        @enologo_revist.enologo_id = @enologo.id
+        @revist = Revist.find_by(params[:revist_id])
+        @enologo_revist.revist_id = @revist.id
         @enologo_revist.save!
         @enologo.save!
         format.html { redirect_to @enologo, notice: 'Enologo was successfully created.' }
@@ -74,7 +76,7 @@ class EnologosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def enologo_params
-      params.require(:enologo).permit(:nombre, :edad, :nacionalidad, { revist_ids: []}, { cargos: []})
+      params.require(:enologo).permit(:nombre, :edad, :nacionalidad, { revist_ids: []})
       
     end
 end
